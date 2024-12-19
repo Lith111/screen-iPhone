@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/all.css">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!-- TODO:contanier to frame -->
+    <div class="container">
+      <div class="frame">
+        <div class="baground">
+        <div class="contaier-frame">
+
+          <!-- TODO:time in scream -->
+          <div class="time">
+            <span class="hours">09</span><span class="min">41</span>
+            <span class="day-in-min"
+              >11 <span class="min-string">jaunary</span></span
+            >
+          </div>
+          <div class="time-befor"></div>
+          <div class="facbook app"><div class="cic"></div><b><i class="fa-brands fa-viber"></i></b></div>
+          <div class="facbook app"><div class="cic"></div><b><i class="fa-brands fa-youtube"></i></b></div>
+          <div class="facbook app"><div class="cic"></div><b><i class="fa-brands fa-facebook"></i></b></div>
+          <div class="facbook app"><div class="cic"></div><b><i class="fa-brands fa-whatsapp"></i></b></div>
+<div class="google app2"><b> <span>google</span> <i class="fa-solid fa-search"></i> </b></div>
+          <div class="google-affter"></div>
+          <div class="facbook app"><div class="cic"></div><b><i class="fa-solid fa-gear"></i></b></div>
+          <div class="facbook app"><div class="cic"></div><b><i class="fa-solid fa-camera"></i></b></div>
+          <div class="facbook app"><div class="cic"></div><b><i class="fa-regular fa-calendar" ></i></b></div>
+          <div class="facbook app"><div class="cic"></div><b><i class="fa-brands fa-amazon"></i></b></div>
+          <div class="facbook app"><div class="cic"></div><b><i class="fa-solid fa-star-and-crescent" ></i></b></div>
+          <div class="facbook app"><div class="cic"></div><b><i class="fa-solid fa-phone"></i></b></div>
+          <div class="facbook app"><div class="cic"></div><b><i class="fa-solid fa-folder"></i></b></div>
+          <div class="facbook app"><div class="cic"></div><b><i class="fa-brands fa-codepen"></i></b></div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/all.js"></script>
+    <script>
+      // TODO: uppdate data
+      setInterval(() => {
+        let hr = document.querySelector(".hours");
+        let mn = document.querySelector(".min");
+        let dayInMin = document.querySelector(".day-in-min");
+        let day = new Date();
+        let hours = `${day.getHours()}`;
+        let min = `${day.getMinutes()}`;
+        if (day.getHours() < 10) {
+          hours = `<span>0${day.getHours()}</span>`;
+        }
+        if (day.getMinutes() < 10) {
+          min = `<span>0${day.getMinutes()}</span>`;
+        }
+        hr.innerHTML = hours;
+        mn.innerHTML = min;
+        dayInMin.innerHTML = `<span class="day-in-min">${day.getDate()} <span>${day
+          .toDateString()
+          .substring(0, 3)}day</span> </span>`;
+      });
+    </script>
+  </body>
+</html>

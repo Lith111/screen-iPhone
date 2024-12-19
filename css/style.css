@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+/* TODO:center the phone in screen  */
+.container {
+  width: 100%;
+  background-color: #acbaca;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.baground {
+  position: static;
+  width: 67%;
+  height: 89%;
+  background-size: cover;
+  transform: translate(24.5%, 6%);
+  border-radius: 110px;
+  background-image: url("../image/pexels-btgl-♡-3894157.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* TODO: add the phon in screen  */
+.frame {
+  position: relative;
+  width: 1000px;
+  height: 1600px;
+  background-image: url("../image/frame.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* TODO : mother of icon app  to crnter the icon in phon */
+.contaier-frame {
+  position: absolute;
+  width: 586px;
+  height: 83%;
+  top: 11%;
+  left: 50%;
+  background-color: transparent;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  /* grid-template-rows: repeat(5, minmax(100px, 1fr)); */
+}
+/* TODO : degin of icon app */
+.app {
+  position: relative;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgb(112 155 178 / 0.4);
+  box-shadow: 10px 10px 10px -3px rgb(112 155 178 / 15%),
+    inset 5px 5px 3.5px rgb(112 155 178), -5px -5px 11px rgb(112 155 178 / 55%),
+    inset -1px -1px 10px rgb(112 155 178 / 20%);
+}
+/* TODO: circle  */
+.cic {
+  position: absolute;
+  inset: 20px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #1976d2, #b71c1c);
+  animation: rot 2s infinite linear;
+}
+b {
+  position: absolute;
+  z-index: 100;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-size: 23px;
+  background-color: #152b4a;
+  inset: 25px;
+  border-radius: 50%;
+}
+@keyframes rot {
+  0% {
+    transform: rotateZ(360deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+/* TODO: style of time */
+.time-befor {
+  grid-column: 4;
+}
+.time {
+  grid-column: 1;
+  justify-self: center;
+  align-self: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 30px;
+}
+.time .min,
+.time .hours {
+  display: flex;
+  font-size: 80px;
+  font-weight: 900;
+  padding: 10px 10px 0 10px;
+  align-items: center;
+  justify-content: center;
+  color: rgb(68, 75, 82);
+  text-shadow: 1px 1px 3px rgb(0 0 0 / 1);
+}
+.time span:nth-child(3) {
+  position: absolute;
+  top: 18%;
+  left: 27px;
+  font-size: 18px;
+  font-weight: 900;
+  color: rgb(68, 75, 82);
+  text-shadow: 1px 1px 3px rgb(0 0 0 / 0.5);
+}
+/* TODO: app google */
+.google-affter {
+  grid-column: 4;
+}
+.app2 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  align-self: center;
+}
+.google {
+  grid-column: 1;
+  width: 400%;
+}
+.google b {
+  height: 70%;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px #152b4a66, inset 5px 5px 10px rgb(255 255 255 / 55%),
+    inset -6px -6px 10px rgb(255 255 255 / 10%);
+  color: rgba(255, 255, 255, 0.616);
+  justify-content: space-between;
+  padding: 0 15px;
+  text-transform: uppercase;
+}
+.google b svg {
+  color: #b71c1c;
+}
